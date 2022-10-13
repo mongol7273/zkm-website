@@ -1,0 +1,281 @@
+---
+import logo from "../images/company-logo.png";
+---
+
+<!-- header section start -->
+<header class="header">
+    <a href="#" class="logo">
+        <img src={logo} alt="company logo" />
+    </a>
+
+    <nav class="navbar">
+        <a href="#home">Главная</a>
+        <a href="#about">Компания</a>
+        <a href="#services">Категории</a>
+        <a href="#projects">Товары</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="info-btn" class="fas fa-info-circle"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="Поиск..." id="search-box" />
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
+
+<div class="contact-info">
+    <div id="close-contact-info" class="fas fa-times"></div>
+
+    <div class="info">
+        <i class="fas fa-phone"></i>
+        <h3>наш телефон</h3>
+        <p>+ 7 701 785 9485</p>
+    </div>
+
+    <div class="info">
+        <i class="fas fa-envelope"></i>
+        <h3>Почтовый адрес</h3>
+        <p>info@zkm.kz</p>
+    </div>
+
+    <div class="info">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>наш адрес</h3>
+        <p>Казахстан, Алматы, Кахарман 47</p>
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+</div>
+<!-- header section end -->
+
+<style>
+    .header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        -webkit-box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadow);
+        padding: 1.5rem 10%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        z-index: 1000;
+        background: var(--white);
+    }
+
+    .header .navbar a {
+        font-size: 1.6rem;
+        color: var(--black);
+        text-transform: capitalize;
+        margin: 0 1rem;
+    }
+
+    .header .navbar a:hover {
+        color: var(--green);
+    }
+
+    .header .icons div {
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        background: var(--light-bg);
+        color: var(--black);
+        cursor: pointer;
+        text-align: center;
+        margin-left: 0.3rem;
+    }
+
+    .header .icons div:hover {
+        background: var(--black);
+        color: var(--white);
+    }
+
+    .header #menu-btn {
+        display: none;
+    }
+
+    .header .search-form {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 70rem;
+        background: var(--white);
+        -webkit-box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadow);
+        padding: 1rem;
+        display: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 1rem;
+        -webkit-animation: fadeIn 0.2s linear;
+        animation: fadeIn 0.2s linear;
+    }
+
+    .header .search-form.active {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .header .search-form input {
+        width: 100%;
+        padding: 1.2rem 1.4rem;
+        background: var(--light-bg);
+        font-size: 1.6rem;
+        color: var(--light-gray);
+    }
+
+    .header .search-form label {
+        font-size: 2.5rem;
+        color: var(--black);
+        cursor: pointer;
+        margin: 0 1rem;
+    }
+
+    .header .search-form label:hover {
+        color: var(--green);
+    }
+
+    .contact-info {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 35rem;
+        background: var(--white);
+        height: 100%;
+        text-align: center;
+        z-index: 1100;
+        padding: 0 2rem;
+        padding-top: 5rem;
+        display: none;
+    }
+
+    .contact-info.active {
+        -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+        display: block;
+    }
+
+    .contact-info #close-contact-info {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        cursor: pointer;
+        font-size: 4rem;
+        color: var(--black);
+    }
+
+    .contact-info #close-contact-info:hover {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .contact-info .info {
+        padding: 2rem 0;
+    }
+
+    .contact-info .info i {
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        background: var(--light-bg);
+        color: var(--black);
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-info .info i:hover {
+        background: var(--black);
+        color: var(--white);
+    }
+
+    .contact-info .info h3 {
+        font-size: 2rem;
+        color: var(--black);
+        text-transform: capitalize;
+        padding: 1rem 0;
+    }
+
+    .contact-info .info p {
+        font-size: 1.5rem;
+        color: var(--light-gray);
+        line-height: 2;
+    }
+
+    .contact-info .share {
+        padding-top: 2rem;
+        border-top: var(--border);
+        margin-top: 1rem;
+    }
+
+    .contact-info .share a {
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        background: var(--light-bg);
+        color: var(--black);
+        cursor: pointer;
+        text-align: center;
+        margin: 0 0.3rem;
+    }
+
+    .contact-info .share a:hover {
+        background: var(--black);
+        color: var(--white);
+    }
+</style>
+
+<script>
+    let navbar = document.querySelector(".header .navbar");
+    let searchForm = document.querySelector(".header .search-form");
+    let contactInfo = document.querySelector(".contact-info");
+
+    document.querySelector("#menu-btn").onclick = () => {
+        navbar.classList.toggle("active");
+    };
+
+    document.querySelector("#search-btn").onclick = () => {
+        searchForm.classList.toggle("active");
+        navbar.classList.remove("active");
+        loginForm.classList.remove("active");
+    };
+
+    document.querySelector("#info-btn").onclick = () => {
+        contactInfo.classList.add("active");
+    };
+
+    document.querySelector("#close-contact-info").onclick = () => {
+        contactInfo.classList.remove("active");
+    };
+
+    window.onscroll = () => {
+        navbar.classList.remove("active");
+        searchForm.classList.remove("active");
+        contactInfo.classList.remove("active");
+    };
+</script>

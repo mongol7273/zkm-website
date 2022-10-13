@@ -1,0 +1,159 @@
+<!-- home section starts  -->
+<section class="home" id="home">
+    <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+            <section class="swiper-slide slide slide1">
+                <div class="content">
+                    <h3>Полный цикл производства</h3>
+                    <p>
+                        Полностью оборудованы под выполнение производственных
+                        задач и выполняем все операции в соответствии с
+                        международными стандартами.
+                    </p>
+                    <a href="#about" class="btn">О компании</a>
+                </div>
+            </section>
+
+            <section class="swiper-slide slide slide2">
+                <div class="content">
+                    <h3>система управления качеством</h3>
+                    <p>
+                        Комплексная система менеджмента, которая ориентируется
+                        на постоянное повышение уровня производства.
+                    </p>
+                    <a href="#about" class="btn">О компании</a>
+                </div>
+            </section>
+
+            <section class="swiper-slide slide slide3">
+                <div class="content">
+                    <h3>Налаженная система доставки</h3>
+                    <p>
+                        Широкая география деятельности компании и налаженная
+                        разветвленная система поставок
+                    </p>
+                    <a href="#about" class="btn">О компании</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<!-- home section ends -->
+
+<style>
+    .home {
+        padding: 0;
+    }
+
+    .slide1 {
+        background: url("../images/slide-1.jpg");
+    }
+    .slide2 {
+        background: url("../images/slide-2.jpg");
+    }
+    .slide3 {
+        background: url("../images/slide-3.jpg");
+    }
+
+    .home .slide {
+        min-height: 60rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    .home .slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(var(--white)),
+            to(transparent)
+        );
+        background: linear-gradient(90deg, var(--white), transparent);
+    }
+
+    .home .slide .content {
+        width: 50rem;
+        position: relative;
+    }
+
+    .home .slide .content h3 {
+        font-size: 6rem;
+        color: var(--black);
+        text-transform: capitalize;
+        text-transform: uppercase;
+    }
+
+    .home .slide .content p {
+        font-family: var(--font-openSans);
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #111111;
+        line-height: 2;
+        padding: 1rem 0;
+    }
+
+    .home .swiper-button-next,
+    .home .swiper-button-prev {
+        top: initial;
+        bottom: 0;
+        left: initial;
+        right: 0;
+        height: 7rem;
+        width: 7rem;
+        line-height: 7rem;
+        background: var(--white);
+    }
+
+    .btn {
+        background-color: #111111;
+    }
+
+    .btn:hover {
+        background-color: #00973d;
+        color: #ffffff;
+    }
+
+    .home .swiper-button-next:hover,
+    .home .swiper-button-prev:hover {
+        background: #00973d;
+    }
+
+    .home .swiper-button-next::after,
+    .home .swiper-button-prev::after {
+        font-size: 2rem;
+        color: var(--black);
+    }
+
+    .home .swiper-button-prev {
+        right: 7rem;
+    }
+</style>
+
+<script>
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>

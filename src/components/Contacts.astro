@@ -1,0 +1,89 @@
+<!-- contact section starts  -->
+<section class="contact" id="contact">
+    <h1 class="heading">Наши Контакты</h1>
+
+    <div class="row">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23234.555242117876!2d76.84833429855901!3d43.28663234712215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836bcbe9bd4ef5%3A0x5d1eea230cdebea8!2sZarya%20Vostoka%20Micro%20District%2C%20Almaty!5e0!3m2!1sen!2skz!4v1665640270896!5m2!1sen!2skz"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <form action="">
+            <h3>Свяжитесь с нами</h3>
+            <input type="text" placeholder="Имя" class="box" />
+            <input type="email" placeholder="Почта" class="box" />
+            <input type="number" placeholder="Телефон" class="box" />
+            <textarea
+                name=""
+                placeholder="Сообщение"
+                class="box"
+                id=""
+                cols="30"
+                rows="10"></textarea>
+            <input type="submit" value="Отпправить сообщение" class="btn" />
+        </form>
+    </div>
+</section>
+
+<!-- contact section ends -->
+<style>
+    .contact {
+        background: #ededed;
+    }
+
+    .contact .heading {
+        color: var(--black);
+    }
+
+    .contact .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .contact .row .map {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 41rem;
+        flex: 1 1 41rem;
+        width: 100%;
+    }
+
+    .contact .row form {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 41rem;
+        flex: 1 1 41rem;
+        background: var(--white);
+        padding: 2rem;
+    }
+
+    .contact .row form h3 {
+        font-size: 2.5rem;
+        color: var(--black);
+        text-transform: capitalize;
+    }
+
+    .contact .row form .box {
+        margin: 0.7rem 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        border-bottom: var(--border);
+        font-size: 1.6rem;
+        color: var(--light-color);
+    }
+
+    .contact .row form .box:focus {
+        border-color: var(--yellow);
+    }
+
+    .contact .row form textarea {
+        height: 15rem;
+        resize: none;
+    }
+</style>

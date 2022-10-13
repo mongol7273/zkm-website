@@ -1,0 +1,99 @@
+---
+import cat1 from "../images/category-1.jpg";
+import cat2 from "../images/category-2.jpg";
+import cat3 from "../images/category-3.jpg";
+import cat4 from "../images/category-4.jpg";
+---
+
+<!-- services section starts  -->
+<section class="services" id="services">
+    <h1 class="heading">Категории продукции</h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src={cat1} alt="" />
+            <h3>анкерные крепи</h3>
+            <p>
+                Анкерные крепи с механическим закреплением предназначены для
+                крепления кровли и бортов горных выработок рудников и шахт.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src={cat2} alt="" />
+            <h3>арочные крепы</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src={cat3} alt="" />
+            <h3>элементы крепления</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src={cat4} alt="" />
+            <h3>Конвейерные ставы и рештаки</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- services section ends -->
+
+<style>
+    .services {
+        background: var(--light-bg);
+    }
+
+    .services .box-container {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2rem;
+    }
+
+    .services .box-container .box {
+        text-align: center;
+        padding: 3rem;
+        background: ##ededed;
+        -webkit-box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadow);
+        border: var(--border);
+    }
+
+    .services .box-container .box:hover img {
+        -webkit-transform: translateY(-1rem);
+        transform: translateY(-1rem);
+    }
+
+    .services .box-container .box img {
+        height: 7rem;
+        margin-bottom: 0.5rem;
+        -webkit-transition: 0.2s linear;
+        transition: 0.2s linear;
+    }
+
+    .services .box-container .box h3 {
+        font-size: 1.7rem;
+        color: var(--black);
+        text-transform: capitalize;
+        padding: 1rem 0;
+    }
+
+    .services .box-container .box p {
+        font-size: 1.4rem;
+        color: var(--light-color);
+        line-height: 2;
+    }
+</style>
